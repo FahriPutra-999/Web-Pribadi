@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaming | Serigala Hitam - W0lF</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="logo" style="display:flex;align-items:center;gap:0.5rem;">
+        <img src="assets/logo.png" alt="Serigala Hitam Logo" style="height:32px;width:auto;border-radius:6px;box-shadow:0 0 10px rgba(0,255,255,0.4);">
+        <span class="glitch" data-text="W0LF">// W0LF_</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#hobbies">Hobbies</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hobby-hero">
+      <div class="hero-bg">
+        <div class="grid"></div>
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+        <div class="glow-orbs">
+          <span class="orb cyan"></span>
+          <span class="orb yellow"></span>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <div class="breadcrumb">
+          <a href="index.html#hobbies"><i class="bi bi-arrow-left"></i> Back to Hobbies</a>
+        </div>
+        <h1 class="hero-title glitch" data-text="GAMING">GAMING</h1>
+        <p class="hero-subtitle">// Time to dive in</p>
+        <p class="hero-text">
+          Not just for fun, but also a way to improve skills, teamwork, and create great experiences.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title glitch" data-text="CURRENTLY PLAYING">CURRENTLY PLAYING</h2>
+          <p class="section-subtitle">// Right now on my radar</p>
+        </header>
+        <div class="hobby-detail-grid">
+          <div class="hobby-detail-card panel highlight">
+            <div class="hobby-icon-large">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h3>Cyberpunk 2077</h3>
+            <p>
+              Game yang paling menarik buatku sekarang. Atmosphere-nya dark cyberpunk, story-nya solid, ditambah vibes Night City
+              yang really cocok sama tema websitenya.
+            </p>
+            <ul class="badges">
+              <li>Open World</li>
+              <li>RPG</li>
+              <li>Cyberpunk</li>
+            </ul>
+          </div>
+        </div>
+
+        <header class="section-header mt-4">
+          <h2 class="section-title glitch" data-text="COMPETITIVE">COMPETITIVE</h2>
+          <p class="section-subtitle">// The grind never stops</p>
+        </header>
+        <div class="hobbies-grid">
+          <div class="hobby-card panel">
+            <h3>Valorant</h3>
+            <p>A fun tactical shooter to grind ranks with the squad. Focus, aim, and communication are the keys.</p>
+            <ul class="badges">
+              <li>FPS</li>
+              <li>Tactical</li>
+              <li>Teamplay</li>
+            </ul>
+          </div>
+          <div class="hobby-card panel">
+            <h3>Counter-Strike 2</h3>
+            <p>A timeless classic. CS2 is always a great place to sharpen mechanics and micro-decisions.</p>
+            <ul class="badges">
+              <li>FPS</li>
+              <li>Competitive</li>
+              <li>Classic</li>
+            </ul>
+          </div>
+          <div class="hobby-card panel">
+            <h3>League of Legends</h3>
+            <p>A competitive MOBA that gets really hype when the whole team is on fire.</p>
+            <ul class="badges">
+              <li>MOBA</li>
+              <li>Competitive</li>
+              <li>Teamplay</li>
+            </ul>
+          </div>
+        </div>
+
+        <header class="section-header mt-4">
+          <h2 class="section-title glitch" data-text="PHILOSOPHY">PHILOSOPHY</h2>
+          <p class="section-subtitle">// My gaming mindset</p>
+        </header>
+        <div class="about-card panel">
+          <p>
+            For me, selama gamenya nyaman dan fun buat dimainkan, aku bisa enjoy sama game itu. Jadi nggak terpaku
+            cuma ke genre tertentu, aku suka coba-coba dan nikmatin vibes-nya. Nickname ku di game biasanya <strong>W0lF</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built with <span class="cyber">Cyberpunk</span> vibes • Fahri Putra <span class="wolf">W0lF</span></p>
+      <p class="small">© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

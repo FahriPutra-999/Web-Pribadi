@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music | Serigala Hitam - W0lF</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="logo" style="display:flex;align-items:center;gap:0.5rem;">
+        <img src="assets/logo.png" alt="Serigala Hitam Logo" style="height:32px;width:auto;border-radius:6px;box-shadow:0 0 10px rgba(0,255,255,0.4);">
+        <span class="glitch" data-text="W0LF">// W0LF_</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#hobbies">Hobbies</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hobby-hero">
+      <div class="hero-bg">
+        <div class="grid"></div>
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+        <div class="glow-orbs">
+          <span class="orb cyan"></span>
+          <span class="orb yellow"></span>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <div class="breadcrumb">
+          <a href="index.html#hobbies"><i class="bi bi-arrow-left"></i> Back to Hobbies</a>
+        </div>
+        <h1 class="hero-title glitch" data-text="MUSIC">MUSIC</h1>
+        <p class="hero-subtitle">// Vibes for every moment</p>
+        <p class="hero-text">
+          Musik selalu jadi soundtrack buat coding, gaming, atau sekedar jalan-jalan. Cocok buat nyetel pas need energy atau just chill.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title glitch" data-text="FAVORITE GENRES">FAVORITE GENRES</h2>
+          <p class="section-subtitle">// What I listen to</p>
+        </header>
+        <div class="hobbies-grid">
+          <div class="hobby-card panel">
+            <i class="bi bi-vinyl"></i>
+            <h3>Rock</h3>
+            <p>Genre favorit ku. Ada sesuatu di gitar keras yang bisa kasih energy langsung kalo lagi denger.</p>
+            <ul class="badges">
+              <li>Classic Rock</li>
+              <li>Alternative Rock</li>
+            </ul>
+          </div>
+          <div class="hobby-card panel">
+            <i class="bi bi-boombox"></i>
+            <h3>EDM</h3>
+            <p>Perfect buat boost semangat, apalagi pas lagi coding atau buat keep focus dengan beat yang catchy.</p>
+            <ul class="badges">
+              <li>EDM</li>
+              <li>Electronic</li>
+            </ul>
+          </div>
+          <div class="hobby-card panel">
+            <i class="bi bi-mic"></i>
+            <h3>Pop</h3>
+            <p>Kadang pengen yang ringan dan catchy. Pop selalu can be mood booster yang simpel.</p>
+            <ul class="badges">
+              <li>Pop</li>
+              <li>Catchy</li>
+            </ul>
+          </div>
+        </div>
+
+        <header class="section-header mt-4">
+          <h2 class="section-title glitch" data-text="GAME OST">GAME OST</h2>
+          <p class="section-subtitle">// The underrated gems</p>
+        </header>
+        <div class="about-card panel highlight">
+          <p>
+            Selain genre umum, aku juga super love sama <strong>Game OST</strong>. Banyak diantaranya yang underrated,
+            tapi really memorable dan bisa langsung bawa vibes ke game yang aku mainin.
+          </p>
+          <p>
+            Apalagi kalo lagi nyetel OST-nya pas lagi ngecoding atau browsing, rasanya really perfect.
+          </p>
+        </div>
+
+        <header class="section-header mt-4">
+          <h2 class="section-title glitch" data-text="MOOD">MOOD</h2>
+          <p class="section-subtitle">// When I need it</p>
+        </header>
+        <div class="hobbies-grid">
+          <div class="hobby-card panel">
+            <h3>Coding at Night</h3>
+            <p>Synthwave / Rock / Game OST — perfect to stay motivated through late nights.</p>
+          </div>
+          <div class="hobby-card panel">
+            <h3>Gaming Session</h3>
+            <p>EDM or hype playlists to keep the energy up with the squad.</p>
+          </div>
+          <div class="hobby-card panel">
+            <h3>Chill Time</h3>
+            <p>Mellow rock or pop to relax after a long day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built with <span class="cyber">Cyberpunk</span> vibes • Fahri Putra <span class="wolf">W0lF</span></p>
+      <p class="small">© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
