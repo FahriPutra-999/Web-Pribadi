@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery of my Instagram posts — Serigala Hitam (W0lF)." />
+  <title>Gallery | Serigala Hitam - W0lF</title>
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html#home" class="logo glitch" data-text="W0LF">// W0LF_</a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#hobbies">Hobbies</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hobby-hero">
+      <div class="hero-bg">
+        <div class="grid"></div>
+        <div class="scanlines"></div>
+        <div class="noise"></div>
+        <div class="glow-orbs">
+          <span class="orb cyan"></span>
+          <span class="orb yellow"></span>
+        </div>
+      </div>
+      <div class="container hero-content">
+        <div class="breadcrumb">
+          <a href="index.html#hobbies"><i class="bi bi-arrow-left"></i> Back to Hobbies</a>
+        </div>
+        <h1 class="hero-title glitch" data-text="GALLERY">GALLERY</h1>
+        <p class="hero-subtitle">// Snapshots from my Instagram</p>
+        <p class="hero-text">
+          A collection of moments, thoughts, and random things I shared on Instagram.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title glitch" data-text="INSTAGRAM POSTS">INSTAGRAM POSTS</h2>
+          <p class="section-subtitle">// Click an image to zoom</p>
+        </header>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Images are loaded from assets/gallery/ by script below. -->
+        </div>
+
+        <div class="center mt-4">
+          <a href="https://www.instagram.com/fahriputrawibowo/" target="_blank" rel="noopener" class="btn btn-ghost">
+            <span class="btn-inner"><i class="bi bi-instagram"></i> VISIT MY INSTAGRAM</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Built with <span class="cyber">Cyberpunk</span> vibes • Serigala Hitam <span class="wolf">W0lF</span></p>
+      <p class="small">© <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+    <img id="lightboxImage" src="" alt="Gallery preview" />
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      // Add your Instagram post image filenames here.
+      // Put the files inside: assets/gallery/
+      // Example: 'post-1.jpg', 'post-2.png'
+      const images = [];
+
+      const grid = document.getElementById('galleryGrid');
+      const lightbox = document.getElementById('galleryLightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const closeBtn = document.getElementById('lightboxClose');
+
+      if (!images.length) {
+        grid.innerHTML =
+          '<div class="gallery-empty panel" style="grid-column:1/-1;text-align:center;padding:3rem;">' +
+            '<i class="bi bi-images" style="font-size:3rem;color:var(--neon-cyan);"></i>' +
+            '<h3 style="margin:1rem 0 0.5rem;color:var(--neon-yellow);">No posts yet</h3>' +
+            '<p>Put your Instagram images in <code>assets/gallery/</code> and add their filenames in <code>gallery.html</code>.</p>' +
+          '</div>';
+        return;
+      }
+
+      images.forEach(function (file, index) {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'gallery-item panel';
+        card.setAttribute('aria-label', 'Open image ' + (index + 1));
+        card.innerHTML = '<img src="assets/gallery/' + file + '" alt="Instagram post ' + (index + 1) + '" loading="lazy">';
+        card.addEventListener('click', function () {
+          lightboxImage.src = 'assets/gallery/' + file;
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+        });
+        grid.appendChild(card);
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImage.src = '';
+      }
+
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
