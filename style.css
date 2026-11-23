@@ -770,120 +770,9 @@ ul {
   text-align: center;
 }
 
-/* Hobbies */
-.hobbies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hobby-card {
-  text-align: center;
-  width: 100%;
-  max-width: 320px;
-}
-
-.hobby-card i {
-  font-size: 2rem;
-  color: var(--neon-yellow);
-  margin-bottom: 0.75rem;
-  display: block;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
-.hobby-card h3 {
-  color: var(--neon-cyan);
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.hobby-link {
-  display: block;
-  color: var(--text-secondary);
-  cursor: pointer;
-}
-
-.hobby-link:hover {
-  color: var(--text-primary);
-}
-
-.hobby-link:hover h3 {
-  color: var(--neon-yellow);
-}
-
-.read-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.85rem;
-  color: var(--neon-cyan);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hobby-link:hover .read-more {
-  color: var(--neon-yellow);
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
-}
-
-/* Hobby Detail Pages */
-.hobby-hero {
+/* Gallery hero */
+.page-hero {
   min-height: 60vh;
-}
-
-.breadcrumb {
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.hobby-detail-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hobby-detail-card {
-  text-align: center;
-}
-
-.hobby-detail-card h3 {
-  color: var(--neon-yellow);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.hobby-detail-card p {
-  margin-bottom: 1rem;
-}
-
-.hobby-icon-large {
-  font-size: 3rem;
-  color: var(--neon-cyan);
-  margin-bottom: 1rem;
-  text-shadow: var(--accent-glow);
-}
-
-.panel.highlight {
-  border-color: rgba(255, 215, 0, 0.5);
-}
-
-.panel.highlight::before {
-  background: linear-gradient(90deg, transparent, var(--neon-yellow), transparent);
 }
 
 /* Contact */
@@ -1175,8 +1064,7 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .projects-grid,
-  .hobbies-grid {
+  .projects-grid {
     grid-template-columns: 1fr;
     justify-items: center;
   }
